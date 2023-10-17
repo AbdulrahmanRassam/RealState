@@ -45,7 +45,13 @@ use App\Models\SearchProfile;
 
         }
 
-        return $matchedSearchProfiles;
+
+            return  response()->json([
+                'data'=>$matchedSearchProfiles,
+                'msg'=>' Data Retrieved Succesfully',
+
+            ], 200);
+
         }else{
 
             return  response()->json([
