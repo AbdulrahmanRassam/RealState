@@ -22,5 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('v1')
    ->group(function (){
-Route::get('/properties/{propertyId}', [\App\Http\Controllers\PropertyController::class, 'getAll'])->name('jobs-applied');
+        Route::get('/match/{propertyId}', [\App\Http\Controllers\PropertyController::class, 'getAll'])->name('jobs-applied');
    });
